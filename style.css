@@ -1,0 +1,588 @@
+body {
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+margin: 0;
+}
+.amplop {
+position:absolute;
+width:75vw; 
+height: 40vw;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+margin-bottom:25px; 
+border:15px solid transparent;
+background: #feb;
+background-image: -moz-linear-gradient(#feb, #feb), 
+-moz-repeating-linear-gradient(-45deg, #d50, #d50 15px, transparent 15px, transparent 30px, #15c 30px, #15c 45px, transparent 45px, transparent 60px);
+background-image: -ms-linear-gradient(#feb, #feb), 
+-ms-repeating-linear-gradient(-45deg, #d50, #d50 15px, transparent 15px, transparent 30px, #15c 30px, #15c 45px, transparent 45px, transparent 60px);
+background-image: -o-linear-gradient(#feb, #feb), 
+-o-repeating-linear-gradient(-45deg, #d50, #d50 15px, transparent 15px, transparent 30px, #15c 30px, #15c 45px, transparent 45px, transparent 60px);
+background-image: -webkit-linear-gradient(#feb, #feb), 
+-webkit-repeating-linear-gradient(-45deg, #d50, #d50 15px, transparent 15px, transparent 30px, #15c 30px, #15c 45px, transparent 45px, transparent 60px);
+background-clip: padding-box, border-box;
+background-origin: border-box;
+font: italic 100% Georgia, serif;
+box-shadow:2px 2px 13px rgba(0,0,0,.5);
+}
+
+.amplop span.to {
+position: absolute;
+right: 0;
+bottom: 5px;
+}
+.amplop span.perangko {
+background: #d8bb9d;
+display: block;
+float: right;
+height: 13.9vw;
+margin-left: 20px;
+padding: 5px;
+width: 10vw;
+}
+
+.amplop span.triangle {
+background-image: -webkit-linear-gradient(45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb), -webkit-linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb);
+background-position: 0% 0;
+background-repeat: repeat;
+background-size: 10px 10px;
+background-image: -o-linear-gradient(45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb), -o-linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb); 
+background-image: -moz-linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb), -moz-linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb); 
+background-image: -ms-linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb), -ms-linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb); 
+background-image: linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb), linear-gradient(-45deg, #feb 25%, transparent 25%, transparent 75%, #feb 75%, #feb);}
+
+.amplop span.perangko img {
+background: #d8bb9d;
+display: block;
+height: 13vw;
+padding: 5px;
+width: 9vw;
+}
+.container-first {
+width: 100%;
+height: 100%;
+background-color: #00d4ff;
+}
+.container {
+transform: translateY(100%);
+}
+.container-image {
+position: absolute;
+width: 100%;
+text-align: center;
+top: 20%;
+margin: auto;
+}
+.container-image img {
+width: 40%;
+height: 40%;
+}
+.container-text {
+position: absolute;
+font-family: 'Brush Script MT', cursive;
+width: 100%;
+z-index: 101;
+color: white;
+margin: auto;
+text-align: center;
+}
+.text {
+font-size: 4vw;
+}
+@-webkit-keyframes shooting-star {
+0% {
+    opacity: 1;
+}
+60%, 100% {
+    transform: rotate(-40deg) translate3d(calc(-2 * 100vw), 0, 0);
+    opacity: 0.5;
+    width: 0;
+}
+}
+
+@keyframes shooting-star {
+0% {
+    opacity: 1;
+}
+60%, 100% {
+    transform: rotate(-40deg) translate3d(calc(-2 * 100vw), 0, 0);
+    opacity: 0.5;
+    width: 0;
+}
+}
+@-webkit-keyframes trembling {
+0% {
+    opacity: 1;
+    transform: scale(100%);
+}
+25% {
+    opacity: 0.8;
+    transform: scale(80%);
+}
+50% {
+    opacity: 0.6;
+    transform: scale(60%);
+}
+75% {
+    opacity: 0.8;
+    transform: scale(80%);
+}
+100% {
+    opacity: 1;
+    transform: scale(100%);
+}
+}
+@keyframes trembling {
+0% {
+    opacity: 1;
+    transform: scale(100%);
+}
+25% {
+    opacity: 0.8;
+    transform: scale(80%);
+}
+50% {
+    opacity: 0.6;
+    transform: scale(60%);
+}
+75% {
+    opacity: 0.8;
+    transform: scale(80%);
+}
+100% {
+    opacity: 1;
+    transform: scale(100%);
+}
+}
+.sky {
+background: #020024;
+background: linear-gradient(180deg, #020024 0%, rgba(9, 10, 121, 0.912202381) 58%, #00d4ff 100%);
+height: 100vh;
+width: 100vw;
+}
+
+.moon {
+position: absolute;
+z-index: 10;
+top: 30px;
+right: 50px;
+width: 60px;
+height: 60px;
+background-color: transparent;
+border-radius: 50%;
+box-shadow: 10px 10px 0px 0px #fefcd7;
+}
+
+.star {
+display: inline-block;
+border-radius: 50%;
+position: absolute;
+}
+.star.trembling-1 {
+-webkit-animation: 1s linear 0s infinite trembling;
+        animation: 1s linear 0s infinite trembling;
+}
+.star.trembling-2 {
+-webkit-animation: 2s linear 0s infinite trembling;
+        animation: 2s linear 0s infinite trembling;
+}
+.star.trembling-3 {
+-webkit-animation: 3s linear 0s infinite trembling;
+        animation: 3s linear 0s infinite trembling;
+}
+.star.trembling-4 {
+-webkit-animation: 4s linear 0s infinite trembling;
+        animation: 4s linear 0s infinite trembling;
+}
+.star.trembling-5 {
+-webkit-animation: 5s linear 0s infinite trembling;
+        animation: 5s linear 0s infinite trembling;
+}
+.star.trembling-6 {
+-webkit-animation: 6s linear 0s infinite trembling;
+        animation: 6s linear 0s infinite trembling;
+}
+.star.trembling-7 {
+-webkit-animation: 7s linear 0s infinite trembling;
+        animation: 7s linear 0s infinite trembling;
+}
+.star.trembling-8 {
+-webkit-animation: 8s linear 0s infinite trembling;
+        animation: 8s linear 0s infinite trembling;
+}
+.star.trembling-9 {
+-webkit-animation: 9s linear 0s infinite trembling;
+        animation: 9s linear 0s infinite trembling;
+}
+.star.trembling-10 {
+-webkit-animation: 10s linear 0s infinite trembling;
+        animation: 10s linear 0s infinite trembling;
+}
+.star.trembling-11 {
+-webkit-animation: 11s linear 0s infinite trembling;
+        animation: 11s linear 0s infinite trembling;
+}
+.star.trembling-12 {
+-webkit-animation: 12s linear 0s infinite trembling;
+        animation: 12s linear 0s infinite trembling;
+}
+.star.trembling-13 {
+-webkit-animation: 13s linear 0s infinite trembling;
+        animation: 13s linear 0s infinite trembling;
+}
+.star.trembling-14 {
+-webkit-animation: 14s linear 0s infinite trembling;
+        animation: 14s linear 0s infinite trembling;
+}
+.star.trembling-15 {
+-webkit-animation: 15s linear 0s infinite trembling;
+        animation: 15s linear 0s infinite trembling;
+}
+.star.trembling-16 {
+-webkit-animation: 16s linear 0s infinite trembling;
+        animation: 16s linear 0s infinite trembling;
+}
+.star.trembling-17 {
+-webkit-animation: 17s linear 0s infinite trembling;
+        animation: 17s linear 0s infinite trembling;
+}
+.star.trembling-18 {
+-webkit-animation: 18s linear 0s infinite trembling;
+        animation: 18s linear 0s infinite trembling;
+}
+.star.trembling-19 {
+-webkit-animation: 19s linear 0s infinite trembling;
+        animation: 19s linear 0s infinite trembling;
+}
+.star.trembling-20 {
+-webkit-animation: 20s linear 0s infinite trembling;
+        animation: 20s linear 0s infinite trembling;
+}
+.star.dark {
+background: rgba(255, 255, 255, 0.3);
+}
+.star.light {
+background: rgba(255, 255, 255, 0.6);
+}
+.star.small {
+width: 1px;
+height: 1px;
+}
+.star.normal {
+width: 2px;
+height: 2px;
+}
+.star.large {
+width: 3px;
+height: 3px;
+}
+.star.shooting-star {
+opacity: 0;
+width: 100px;
+border-radius: 5px;
+-webkit-animation-duration: 4s;
+        animation-duration: 4s;
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+-webkit-animation-name: shooting-star;
+        animation-name: shooting-star;
+-webkit-animation-timing-function: cubic-bezier(0.33, 0.19, 0.26, 1.3);
+        animation-timing-function: cubic-bezier(0.33, 0.19, 0.26, 1.3);
+transform: rotate(-45deg) translate3d(0, 0, 0);
+will-change: transform, width, opacity;
+}
+.star.shooting-star.delay-1 {
+-webkit-animation-delay: 25s;
+        animation-delay: 25s;
+}
+.star.shooting-star.delay-2 {
+-webkit-animation-delay: 50s;
+        animation-delay: 50s;
+}
+.star.shooting-star.delay-3 {
+-webkit-animation-delay: 100s;
+        animation-delay: 100s;
+}
+.star.shooting-star.delay-4 {
+-webkit-animation-delay: 150s;
+        animation-delay: 150s;
+}
+.star.shooting-star.delay-5 {
+-webkit-animation-delay: 200s;
+        animation-delay: 200s;
+}
+
+@keyframes firework {
+0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
+50% { width: 0.5vmin; opacity: 1; }
+100% { width: var(--finalSize); opacity: 0; }
+}
+
+/* @keyframes fireworkPseudo {
+0% { transform: translate(-50%, -50%); width: var(--initialSize); opacity: 1; }
+50% { width: 0.5vmin; opacity: 1; }
+100% { width: var(--finalSize); opacity: 0; }
+}
+*/
+.firework,
+.firework::before,
+.firework::after
+{
+--initialSize: 1.5vmin;
+--finalSize: 45vmin;
+--particleSize: 1.2vmin;
+--color1: yellow;
+--color2: khaki;
+--color3: white;
+--color4: lime;
+--color5: gold;
+--color6: mediumseagreen;
+--y: -30vmin;
+--x: -50%;
+--initialY: 80vmin;
+content: "";
+animation: firework 5s infinite;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, var(--y));
+width: var(--initialSize);
+overflow: hidden;
+aspect-ratio: 1;
+background: 
+    /*
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 0%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 0%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 100%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 100%,
+    */
+    
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 50% 0%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 50%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 50% 100%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 0% 50%,
+    
+    /* bottom right */
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 80% 90%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 95% 90%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 90% 70%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 60%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 55% 80%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 70% 77%,
+    
+    /* bottom left */
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 22% 90%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 45% 90%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 70%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 10% 60%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 31% 80%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 28% 77%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 13% 72%,
+    
+    /* top left */
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 80% 10%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 95% 14%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 90% 23%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 100% 43%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 85% 27%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 77% 37%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 60% 7%,
+    
+    /* top right */
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 22% 14%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 45% 20%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 34%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 10% 29%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 31% 37%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 28% 7%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 13% 42%
+    ;
+background-size: var(--initialSize) var(--initialSize);
+background-repeat: no-repeat;
+}
+
+.firework::before {
+--x: -50%;
+--y: -50%;
+--initialY: -50%;
+/*   transform: translate(-20vmin, -2vmin) rotate(40deg) scale(1.3) rotateY(40deg); */
+transform: translate(-50%, -50%) rotate(40deg) scale(1.3) rotateY(40deg);
+/*   animation: fireworkPseudo 2s infinite; */
+}
+
+.firework::after {
+--x: -50%;
+--y: -50%;
+--initialY: -50%;
+/*   transform: translate(44vmin, -50%) rotate(170deg) scale(1.15) rotateY(-30deg); */
+transform: translate(-50%, -50%) rotate(170deg) scale(1.15) rotateY(-30deg);
+/*   animation: fireworkPseudo 2s infinite; */
+}
+
+.firework:nth-child(2) {
+--x: 10vmin;
+}
+
+.firework:nth-child(2),
+.firework:nth-child(2)::before,
+.firework:nth-child(2)::after {
+--color1: pink;
+--color2: violet;
+--color3: fuchsia;
+--color4: orchid;
+--color5: plum;
+--color6: lavender;  
+--finalSize: 40vmin;
+left: 30%;
+top: 45%;
+animation-delay: -0.25s;
+}
+
+.firework:nth-child(3) {
+--x: -30vmin;
+--y: -50vmin;
+}
+
+.firework:nth-child(3),
+.firework:nth-child(3)::before,
+.firework:nth-child(3)::after {
+--color1: cyan;
+--color2: lightcyan;
+--color3: lightblue;
+--color4: PaleTurquoise;
+--color5: SkyBlue;
+--color6: lavender;
+--finalSize: 35vmin;
+left: 70%;
+top: 48%;
+animation-delay: -0.4s;
+}
+
+.firework:nth-child(4) {
+--x: -20vmin;
+--y: -15vmin;
+}
+
+.firework:nth-child(4),
+.firework:nth-child(4)::before,
+.firework:nth-child(4)::after {
+--color1: rgb(221, 48, 114);
+--color2: rgb(140, 124, 233);
+--color3: rgb(108, 236, 253);
+--color4: rgb(240, 140, 165);
+--color5: SkyBlue;
+--color6: rgb(89, 252, 189);
+--finalSize: 35vmin;
+left: 85%;
+top: 50%;
+animation-delay: -0.3s;
+}
+
+.firework:nth-child(5) {
+--x: -10vmin;
+--y: -35vmin;
+}
+
+.firework:nth-child(5),
+.firework:nth-child(5)::before,
+.firework:nth-child(5)::after {
+--color1: rgb(245, 199, 100);
+--color2: rgb(237, 247, 103);
+--color3: rgb(122, 248, 105);
+--color4: rgb(128, 248, 248);
+--color5: rgb(89, 199, 243);
+--color6: rgb(182, 182, 241);
+--finalSize: 35vmin;
+left: 30%;
+top: 50%;
+animation-delay: -0.5s;
+}
+
+.firework:nth-child(6) {
+--x: -55vmin;
+--y: -10vmin;
+}
+
+.firework:nth-child(6),
+.firework:nth-child(6)::before,
+.firework:nth-child(6)::after {
+--color1: rgb(238, 178, 191);
+--color2: rgb(245, 165, 245);
+--color3: rgb(155, 154, 240);
+--color4: rgb(148, 230, 230);
+--color5: rgb(174, 220, 238);
+--color6: rgb(207, 247, 162);
+--finalSize: 35vmin;
+left: 60%;
+top: 15%;
+animation-delay: -0.55s;
+}
+
+.container-balloon {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.balloon {
+display:inline-block;
+width:15vw;
+height:15vw;
+background:hsl(215,50%,65%);
+border-radius:80%;
+position:relative;
+box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+margin:2px 3px;
+transition:transform 0.5s ease;
+z-index:100;
+animation:balloons 14s ease-in-out infinite;
+transform-origin:bottom center;
+opacity: 1;
+}
+
+@keyframes balloons {
+0%{ transform:translateY(0) rotate(-4deg); opacity: 1;}
+50%{ transform:translateY(-25vh) rotate(4deg); opacity: 0.8;}
+75%{ transform:translateY(-50vh) rotate(-4deg); opacity: 0.5;}
+100%{ transform:translateY(-90vh) rotate(4deg); opacity: 0;}
+}
+
+
+.balloon:before {
+content:"▲";
+font-size:3vw;
+color:hsl(215,30%,50%);
+display:block;
+text-align:center;
+width:100%;
+position:absolute;
+bottom:-2.4vw;
+}
+
+.balloon:after {
+display:inline-block;
+text-align: center;
+position:absolute;
+height:18vw;
+width:.5vw;
+margin:0 auto;
+content:"";
+background:rgba(0,0,0,0.2);
+top: 16.2vw;
+left: 7.2vw;
+overflow: hidden;
+}
+
+.balloon:nth-child(2){ background:hsl(245,40%,65%); animation-duration:13.5s; }
+.balloon:nth-child(2):before { color:hsl(245,40%,65%);  }
+
+.balloon:nth-child(3){ background:hsl(139,50%,60%); animation-duration:13s; }
+.balloon:nth-child(3):before { color:hsl(139,30%,50%);  }
+
+.balloon:nth-child(4){ background:hsl(59,50%,58%); animation-duration:14.5s; }
+.balloon:nth-child(4):before { color:hsl(59,30%,52%);  }
+
+.balloon:nth-child(5){ background:hsl(23,55%,57%); animation-duration:15s; }
+.balloon:nth-child(5):before { color:hsl(23,44%,46%);  }
